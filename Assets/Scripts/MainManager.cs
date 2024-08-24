@@ -37,7 +37,7 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
-        bestScoreText.text = "Best score : Name : " + StartMenuManager.instance.bestScore;
+        bestScoreText.text = "Best score : " + StartMenuManager.instance.bestScoreUsername + " : " + StartMenuManager.instance.bestScore;
     }
 
     private void Update()
@@ -77,6 +77,7 @@ public class MainManager : MonoBehaviour
         if(m_Points > StartMenuManager.instance.bestScore)
         {
             StartMenuManager.instance.bestScore = m_Points;
+            StartMenuManager.instance.bestScoreUsername = StartMenuManager.instance.actualUsername;
         }
 
     }
