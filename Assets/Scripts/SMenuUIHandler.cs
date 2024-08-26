@@ -51,5 +51,6 @@ public class SMenuUIHandler : MonoBehaviour
 #else
         Application.Quit();
 #endif
+        StartMenuManager.instance.SaveScoreUser();
     }
 }
